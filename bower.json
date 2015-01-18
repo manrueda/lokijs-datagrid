@@ -1,6 +1,6 @@
 {
   "name": "lokijs-datagrid",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "authors": [
     "Manuel Rueda <manuel.rueda.un@gmail.com>"
   ],
@@ -18,7 +18,7 @@
     "jquery"
   ],
   "license": "MIT",
-  "homepage": "https://manrueda.github.io/lokijs.datagrid/",
+  "homepage": "https://manrueda.github.io/lokijs-datagrid/",
   "ignore": [
     "**/.*",
     "node_modules",
