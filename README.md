@@ -89,15 +89,15 @@ When the grid is created with the command 'lokiGrid', an object must be passed a
     * condensed Set the bootstrap table condensed class 
 
 ## toolbar
-    Array with the properties of each button for the toolbar
+Array with the properties of each button for the toolbar
 
-    * name: Internal name for the button (this class is going to be added as a class)
-    * text: Text for the button
-    * class: String of class names separated with spaces to be added to the button
-    * attr: Object with a key-value structure with attributes to be added to the button
-    * icon: Icon classes for the button icon
+* name: Internal name for the button (this class is going to be added as a class)
+* text: Text for the button
+* class: String of class names separated with spaces to be added to the button
+* attr: Object with a key-value structure with attributes to be added to the button
+* icon: Icon classes for the button icon
 
-    NOTE: The button with the name 'refresh' is a special one, this refresh the data and makes the AJAX call (if the data are remote) and you only can modify the text.
+NOTE: The button with the name 'refresh' is a special one, this refresh the data and makes the AJAX call (if the data are remote) and you only can modify the text.
 
 
 #### License
