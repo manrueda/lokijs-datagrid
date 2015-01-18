@@ -88,9 +88,11 @@ Array with the properties of each column
 Object with a mix of properties
 
 * hover: Set the bootstrap table hover class 
-* striped Set the bootstrap table striped class 
-* bordered Set the bootstrap table bordered class 
-* condensed Set the bootstrap table condensed class 
+* striped: Set the bootstrap table striped class 
+* bordered: Set the bootstrap table bordered class 
+* condensed: Set the bootstrap table condensed class
+* loadingIcon: Set the class for the span that is used when the AJAX is loading
+* pageSize: Number of rows per page (default: 10)
 
 #### toolbar
 Array with the properties of each button for the toolbar

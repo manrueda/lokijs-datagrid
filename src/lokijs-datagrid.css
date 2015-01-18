@@ -1,15 +1,3 @@
-.lokiGrid .lg-toolbar .btn span.glyphicon + span{
-  margin-left: 1rem;
-}
-
-.lokiGrid .lg-toolbar{
-  margin-bottom: 1rem;
-}
-
-.lokiGrid .lg-toolbar a.btn{
-  margin-right: 0.5rem;
-}
-
 .lokiGrid table {
   margin-bottom: 0;
 }
@@ -34,4 +22,72 @@
   width: 100%;
 }
 
+.lokiGrid .lg-toolbar{
+  margin-bottom: 1rem;
+}
 
+.lokiGrid .lg-toolbar a.btn{
+  margin-right: 0.5rem;
+}
+
+.lokiGrid .lg-toolbar span:only-child.icon {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.lokiGrid .lg-toolbar .btn span.icon + span{
+  margin-left: 1rem;
+}
+
+.lokiGrid .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100,100,100, 0.2);
+  z-index: 1000;
+}
+.lokiGrid .overlay span {
+  font-size: 4rem;
+  position: relative;
+  float: left;
+  left: 50%;
+  margin-left: -2rem;
+  top: 50%;
+  margin-top: -2rem;
+  color: rgba(51, 122, 183, 1);
+}
+
+.lokiGrid .overlay:not([style*="display: none"]) span {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
