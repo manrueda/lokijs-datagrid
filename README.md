@@ -3,8 +3,7 @@ LokiJS Datagrid
 
 This is a fusion between the LokiJS ([techfort/LokiJS](https://github.com/techfort/LokiJS)) clien-side DB and a Bootstrap table.
 
-
-#### Installation
+## Installation
 
 1. Run this commnad from your project root:
 
@@ -67,28 +66,28 @@ This is a fusion between the LokiJS ([techfort/LokiJS](https://github.com/techfo
     $('div#grid').data('lokiGrid').load({...});
     ```
 
-#### Options
+## Options
 
 When the grid is created with the command 'lokiGrid', an object must be passed as parameter. This object can have this properties.
 
-## schema
-    Array with the properties of each column
+#### schema
+Array with the properties of each column
 
-    * text: Text to the HTML header of the table.
-    * name: Name of the field in the income data.
-    * type: Data type of the field
-    * isTrue: This string is going to be inserted in the cell if the value is true. Can be HTML (Only form boolean type data)
-    * isTrue: This string is going to be inserted in the cell if the value is false. Can be HTML (Only form boolean type data)
+* text: Text to the HTML header of the table.
+* name: Name of the field in the income data.
+* type: Data type of the field
+* isTrue: This string is going to be inserted in the cell if the value is true. Can be HTML (Only form boolean type data)
+* isTrue: This string is going to be inserted in the cell if the value is false. Can be HTML (Only form boolean type data)
 
-## options
-    Object with a mix of properties
+#### options
+Object with a mix of properties
 
-    * hover: Set the bootstrap table hover class 
-    * striped Set the bootstrap table striped class 
-    * bordered Set the bootstrap table bordered class 
-    * condensed Set the bootstrap table condensed class 
+* hover: Set the bootstrap table hover class 
+* striped Set the bootstrap table striped class 
+* bordered Set the bootstrap table bordered class 
+* condensed Set the bootstrap table condensed class 
 
-## toolbar
+#### toolbar
 Array with the properties of each button for the toolbar
 
 * name: Internal name for the button (this class is going to be added as a class)
@@ -100,7 +99,7 @@ Array with the properties of each button for the toolbar
 NOTE: The button with the name 'refresh' is a special one, this refresh the data and makes the AJAX call (if the data are remote) and you only can modify the text.
 
 
-#### License
+## License
 (The MIT License)
 
 Copyright (c) 2015 Manuel Rueda <manuel.rueda.un@gmail.com>
