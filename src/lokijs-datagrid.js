@@ -356,8 +356,14 @@
     wrapper.addClass(K_CONST_MASTERCLASS);
 
     tableData.table = $('<table></table>');
-
+    if (opts.options === undefined){
+      opts.options = {};
+    }
+    if (opts.toolbar === undefined){
+      opts.toolbar = {};
+    }
     //Twitter Bootstrap
+
     tableData.table.addClass('table table-hover');
     if ((opts.options.hover || true)){
       tableData.table.addClass('table-hover');
