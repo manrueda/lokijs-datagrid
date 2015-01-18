@@ -6,6 +6,10 @@
   margin-bottom: 1rem;
 }
 
+.lokiGrid .lg-toolbar a.btn{
+  margin-right: 0.5rem;
+}
+
 .lokiGrid table {
   margin-bottom: 0;
 }

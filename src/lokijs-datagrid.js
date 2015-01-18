@@ -164,18 +164,39 @@
       tableData.toolbarContainer.find('a.btn.' + K_CLASS_BTN_REFRESH).click(eventHandler.toolbar.btnClick);
     },
     createToolbar: function(tableData){
-      for (var i = 0; i < Object.keys(tableData.toolbar).length; i++){
-        var key   = Object.keys(tableData.toolbar)[i];
-        var value = tableData.toolbar[key];
-        if (key === 'refresh'){
-          var icon = $('<span></span>').addClass('glyphicon glyphicon-refresh');
-          var text;
-          if (value.text){
-            text = $('<span></span>').html(value.text);
+      for (var i = 0; i < tableData.toolbar.length; i++){
+        var tool = tableData.toolbar[i];
+        var icon;
+        var text;
+        var btn;
+        if (tool.name === 'refresh'){
+          icon = $('<span></span>').addClass('glyphicon glyphicon-refresh');
+          if (tool.text){
+            text = $('<span></span>').html(tool.text);
           }
-          var btn = $('<a></a>').addClass('btn btn-primary ' + K_CLASS_BTN_REFRESH);
+          btn = $('<a></a>').addClass('btn btn-primary ' + K_CLASS_BTN_REFRESH);
           btn.append(icon);
           btn.append(text);
+          tableData.toolbarContainer.append(btn);
+        }else{
+          if (tool.icon){
+            icon = $('<span></span>').addClass(tool.icon);
+          }
+          if (tool.text){
+            text = $('<span></span>').html(tool.text);
+          }
+          btn = $('<a></a>').addClass('btn btn-primary ' + tool.name);
+          btn.addClass(tool.class);
+          if (tool.attr){
+            for (var j = 0; j < Object.keys(tool.attr).length; j++){
+              var subKey   = Object.keys(tool.attr)[j];
+              var subValue = tool.attr[subKey];
+              btn.attr(subKey, subValue);
+            }
+          }
+          btn.append(icon);
+          btn.append(text);
+
           tableData.toolbarContainer.append(btn);
         }
       }
@@ -360,7 +381,7 @@
       opts.options = {};
     }
     if (opts.toolbar === undefined){
-      opts.toolbar = {};
+      opts.toolbar = [];
     }
     //Twitter Bootstrap
 
