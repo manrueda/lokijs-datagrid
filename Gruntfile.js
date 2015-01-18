@@ -10,12 +10,9 @@ module.exports = function(grunt) {
         preserveComments: 'some'
       },
       lokiGrid: {
-        files: [{
-          expand: true,
-          cwd: 'src',
-          src: ['**/*.js', '!site/public/**/*.js'],
-          dest: 'dist'
-        }]
+        files:{
+          'dist/lokijs-datagrid.min.js': ['src/lokijs-datagrid.js']
+        }
       }
     },
     jshint: {
@@ -43,7 +40,7 @@ module.exports = function(grunt) {
           cwd: 'src',
           src: ['**/*.css'],
           dest: 'dist',
-          ext: '.css'
+          ext: '.min.css'
         }]
       }
     }
