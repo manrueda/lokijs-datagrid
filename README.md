@@ -14,15 +14,19 @@ This is a fusion between the LokiJS ([techfort/LokiJS](https://github.com/techfo
 2. Import the JS and CSS files
 
     ```html
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bower_components/lokijs-datagrid/dist/lokijs-datagrid.min.css">
+    
 
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/lokijs/build/lokijs.min.js"></script>
     <script type="text/javascript" src="bower_components/lokijs-datagrid/dist/lokijs-datagrid.min.js"></script>
     ```
 
 3. Implement the plugin
 
     ```js
-    $('div#grid')..lokiGrid({
+    $('div#grid').lokiGrid({
         schema: [
             {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
             {text: 'User', name: 'userName', type: lokiDataGrid.columnType.string, filter: true},
