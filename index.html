@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/lokijs-datagrid.min.css">
+    <style type="text/css">
+      .jumbotron{
+        margin-top: 22px;
+        border-radius: 20px;
+        padding: 20px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/ManRueda/lokijs.datagrid/" class="forkMe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div class="jumbotron col-lg-10 col-lg-offset-1">
+      <h1>LokiJS DataGrid</h1>
+      <p>This is a fusion between the LokiJS (techfort/LokiJS) clien-side DB and a Bootstrap table.</p>
+      <br>
+      <div id="userGrid"></div>
+    </div>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/lokijs/build/lokijs.min.js"></script>
+    <script type="text/javascript" src="dist/lokijs-datagrid.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        
+        $('#userGrid').lokiGrid({
+          schema: [
+            {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
+            {text: 'Name', name: 'first_name', type: lokiDataGrid.columnType.string},
+            {text: 'Last name', name: 'last_name', type: lokiDataGrid.columnType.string},
+            {text: 'Email', name: 'email', type: lokiDataGrid.columnType.string},
+            {text: 'Created', name: 'createDate', type: lokiDataGrid.columnType.date},
+            {text: 'Active', name: 'isActive', type: lokiDataGrid.columnType.boolean, isTrue: '<span class="glyphicon glyphicon-ok">', isFalse: '<span class="glyphicon glyphicon-remove">'}
+          ],
+          toolbar: [
+            {
+              name: 'refresh',
+              text: 'Refresh'
+            }
+          ],
+          options: {
+            hover: true,
+            striped: false,
+            bordered: true,
+            condensed: true,
+          }
+        });
+        $('#userGrid').data('lokiGrid').load('MOCK_DATA.json');
+
+      });
+    </script>
+  </body>
+</html>
