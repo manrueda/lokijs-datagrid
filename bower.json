@@ -18,7 +18,7 @@
     "jquery"
   ],
   "license": "MIT",
-  "homepage": "https://manrueda.github.io/loki-datagrid",
+  "homepage": "https://manrueda.github.io/lokijs.datagrid/",
   "ignore": [
     "**/.*",
     "node_modules",

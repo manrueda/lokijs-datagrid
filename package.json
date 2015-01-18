@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/ManRueda/lokijs.datagrid/issues"
   },
-  "homepage": "https://manrueda.github.io/loki-datagrid",
+  "homepage": "https://manrueda.github.io/lokijs.datagrid/",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.11.0",
