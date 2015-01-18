@@ -164,13 +164,16 @@
       tableData.toolbarContainer.find('a.btn.' + K_CLASS_BTN_REFRESH).click(eventHandler.toolbar.btnClick);
     },
     createToolbar: function(tableData){
+      var icon;
+      var text;
+      var btn;
       for (var i = 0; i < tableData.toolbar.length; i++){
         var tool = tableData.toolbar[i];
-        var icon;
-        var text;
-        var btn;
+        icon = undefined;
+        text = undefined;
+        btn = undefined;
         if (tool.name === 'refresh'){
-          icon = $('<span></span>').addClass('glyphicon glyphicon-refresh');
+          icon = $('<span></span>').addClass('glyphicon glyphicon-refresh icon');
           if (tool.text){
             text = $('<span></span>').html(tool.text);
           }
@@ -180,7 +183,7 @@
           tableData.toolbarContainer.append(btn);
         }else{
           if (tool.icon){
-            icon = $('<span></span>').addClass(tool.icon);
+            icon = $('<span></span>').addClass(tool.icon).addClass('icon');
           }
           if (tool.text){
             text = $('<span></span>').html(tool.text);
@@ -323,8 +326,10 @@
     },
     remoteLoad: function remoteLoad(){
       var ds = this;
+      ds.parent.loading.show();
       $.ajax(this.remoteOrigin).done(function done(data) {
         ds.load((typeof data === 'string' ? JSON.parse(data): data));
+        ds.parent.loading.hide();
       });
       return this;
     },
@@ -410,6 +415,8 @@
     tableData.dataSource.wrapper = wrapper;
     tableData.dataSource.parent = tableData;
 
+    tableData.dataSource.pageSize = opts.options.pageSize || tableData.dataSource.pageSize;
+
     tableData.headers = $('<thead></thead>');
     tableData.headers.append('<tr></tr>');
 
@@ -417,7 +424,8 @@
     tableData.footer = $('<div></div>').addClass(K_CLASS_FOOTER);
     tableData.toolbarContainer = $('<div></div>').addClass(K_CLASS_TOOLBAR);
 
-    tableData.loading = $('<div class="hidden"></div>');
+    tableData.loading = $('<div class="overlay"><span class="' + (opts.options.loadingIcon || 'glyphicon glyphicon-refresh') + '"></span></div>');
+    tableData.loading.hide();
 
     intFunction.createToolbar(tableData, opts);
     intFunction.createHeader(tableData, opts);
