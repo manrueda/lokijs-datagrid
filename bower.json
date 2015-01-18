@@ -5,7 +5,7 @@
     "Manuel Rueda <manuel.rueda.un@gmail.com>"
   ],
   "description": "Bootstrap data grid implementation using LokiJS client-side DB",
-  "main": "src/lokijs.datagrid.js",
+  "main": "dist/lokijs.datagrid.js",
   "keywords": [
     "bootstrap",
     "grid",

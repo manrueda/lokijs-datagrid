@@ -1,4 +1,4 @@
-(function (window, document, $, loki) {
+(function (window, document, $, Loki) {
   var K_EVENT_FETCHDATA = 'fetch';
   var K_EVENT_NAMESPACE = 'lokiGrid';
 
@@ -20,14 +20,15 @@
     boolean: 2,
     number: 3,
     date: 4
-  }
+  };
 
 
   var eventHandler = {
     footer: {
       pageClick: function pageClick(event){
-        if ($(this).parents('li').hasClass('disabled'))
+        if ($(this).parents('li').hasClass('disabled')){
           return;
+        }
         var data = $(this).parents('div.' + K_CONST_MASTERCLASS).data(K_CONST_DATA_NAME);
         switch($(this).attr(K_ATTR_DATAPAGE)){
           case '-1':
@@ -49,14 +50,16 @@
         var cont = true;
         $.each($(this).parents('thead').find('th:has(span.opened)'), function(index, item){
           $(item).width('auto');
-          if ($(item).find('span.opened').attr('data-filter') == filed)
+          if ($(item).find('span.opened').attr('data-filter') === filed){
             cont = false;
+          }
           $(item).find('span.opened').removeClass('opened');
           $(item).find('input').remove();
         });
 
-        if (!cont)
+        if (!cont){
           return false;
+        }
 
         var input = $('<input></input>');
         var data = $(this).parents('.' + K_CONST_MASTERCLASS).data(K_CONST_DATA_NAME);
@@ -94,7 +97,7 @@
         $(this).parents('.' + K_CONST_MASTERCLASS).data(K_CONST_DATA_NAME).reload();
       }
     }
-  }
+  };
 
   var intFunction = {
     createHeader: function createHeader(tableData, opts){
@@ -119,7 +122,7 @@
     createDb: function createDb(tableData, opts){
       tableData.dataSource.db = new loki(tableData.wrapper.attr('id'));
       tableData.dataSource.collection = tableData.dataSource.db.addCollection(tableData.wrapper.attr('id'));
-      tableData.dataSource.dynamicView = tableData.dataSource.collection.addDynamicView("gridView");
+      tableData.dataSource.dynamicView = tableData.dataSource.collection.addDynamicView('gridView');
     },
     createFooter: function createFooter(tableData){
       var cur = tableData.dataSource.current;
@@ -128,7 +131,7 @@
       foot.push('<nav><ul class="pagination">');
 
 
-      foot.push('<li class="' + (cur.page == 1 ? 'disabled':'') + '" ><a data-page="-1"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>');
+      foot.push('<li class="' + (cur.page === 1 ? 'disabled':'') + '" ><a data-page="-1"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>');
 
 
       var begin = (cur.page < 6 ? 1 : cur.page - 5);
@@ -136,14 +139,15 @@
       stop = (stop < 11 ? stop : 11) + begin;
       
       for(var i = begin; i <= stop && i <= Math.ceil(cur.length / tableData.dataSource.pageSize); i++){
-        if (i == cur.page)
+        if (i === cur.page){
           //Twitter Bootstrap;
           foot.push(['<li class="active"><a ', K_ATTR_DATAPAGE, '="', i, '">', i, '</a></li>'].join(''));  
-        else
+        } else {
           foot.push(['<li><a ', K_ATTR_DATAPAGE, '="', i, '">', i, '</a></li>'].join(''));  
+        }
       }
 
-      foot.push('<li class="' + (cur.page == Math.ceil(cur.length / tableData.dataSource.pageSize) ? 'disabled':'') + '" ><a data-page="+1"><span aria-hidden="true">&raquo;</span><span class="sr-only">Previous</span></a></li>');
+      foot.push('<li class="' + (cur.page === Math.ceil(cur.length / tableData.dataSource.pageSize) ? 'disabled':'') + '" ><a data-page="+1"><span aria-hidden="true">&raquo;</span><span class="sr-only">Previous</span></a></li>');
 
       foot.push('</ul></nav>');
 
@@ -165,9 +169,11 @@
         var value = tableData.toolbar[key];
         if (key === 'refresh'){
           var icon = $('<span></span>').addClass('glyphicon glyphicon-refresh');
-          if (value.text)
-            var text = $('<span></span>').html(value.text);
-          var btn = $('<a></a>').addClass('btn btn-primary ' + K_CLASS_BTN_REFRESH)
+          var text;
+          if (value.text){
+            text = $('<span></span>').html(value.text);
+          }
+          var btn = $('<a></a>').addClass('btn btn-primary ' + K_CLASS_BTN_REFRESH);
           btn.append(icon);
           btn.append(text);
           tableData.toolbarContainer.append(btn);
@@ -180,7 +186,7 @@
       var uuid = 'xxx-xx-4xxx-yxx-xxxxxxx'.replace(/[xy]/g, function(c) {
           var r = (d + Math.random()*16)%16 | 0;
           d = Math.floor(d/16);
-          return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+          return (c==='x' ? r : (r&0x3|0x8)).toString(16);
       });
       return uuid;
     }
@@ -192,10 +198,10 @@
       this.wrapper.one(K_EVENT_FETCHDATA, function K_EVENT_FETCHDATA(){
         $(this).data(K_CONST_DATA_NAME).refresh();
       });
-      if (typeof income == 'object'){
+      if (typeof income === 'object'){
         this.dataSource.load(income);
       }
-      if (typeof income == 'string'){
+      if (typeof income === 'string'){
         this.dataSource.remoteOrigin = income;
         this.dataSource.remoteLoad();
       }
@@ -253,20 +259,28 @@
         this.refresh();
       }
     },
-    select: function (row){
+    select: function select(row){
       if (!row){
         return this.table.find('tr.' + K_CLASS_SELECTED);
       }else{
         row.siblings().removeClass(K_CLASS_SELECTED);
-        row.addClass(K_CLASS_SELECTED)
+        row.addClass(K_CLASS_SELECTED);
         return row;
       }
     },
-    dataItem: function(row){
+    dataItem: function dataItem(row){
       if (!row){
         return this.dataSource.findByUID(this.select().attr('data-uid'));
       }else{
         return this.dataSource.findByUID(row.attr('data-uid'));
+      }
+    },
+    getColumn: function getColumn(name){
+      var result = this.schema.filter(function(e){return e.name === name;});
+      if (result.length === 0){
+        return undefined;
+      }else{
+        return result[0];
       }
     }
   };
@@ -289,17 +303,18 @@
     remoteLoad: function remoteLoad(){
       var ds = this;
       $.ajax(this.remoteOrigin).done(function done(data) {
-        ds.load((typeof data == 'string' ? JSON.parse(data): data));
+        ds.load((typeof data === 'string' ? JSON.parse(data): data));
       });
       return this;
     },
     getView: function getView(){
       this.current.length = this.dynamicView.resultset.data().length;
-      return this.dynamicView.resultset.offset(this.pageSize * (this.current.page - 1)).limit(this.pageSize).data()
+      return this.dynamicView.resultset.offset(this.pageSize * (this.current.page - 1)).limit(this.pageSize).data();
     },
     findByUID: function findByUID(uid){
-      if (!uid)
+      if (!uid){
         return undefined;
+      }
       return this.dynamicView.resultset.find({dataUid: uid})[0];
     },
     select: undefined,
@@ -309,16 +324,17 @@
       if (filters){
         this.dynamicView.filterPipeline = [];
         for (var i = 0; i < Object.keys(filters).length; i++){
-          var filter = {};
+          var auxFilter = {};
           var filed   = Object.keys(filters)[i];
           var value = filters[filed];
-          var schema = this.parent.schema.filter(function(e){return e.name == filed})[0];
-          if (schema.type == K_COLUMNS_TYPE.string || schema.type == K_COLUMNS_TYPE.date)
-            filter[filed] = {$contains: value};
-          else
-            filter[filed] = {$eq: value};
+          var schema = this.parent.getColumn(filed);
+          if (schema.type === K_COLUMNS_TYPE.string || schema.type === K_COLUMNS_TYPE.date){
+            auxFilter[filed] = {$contains: value};
+          }else{
+            auxFilter[filed] = {$eq: value};
+          }
             
-          this.dynamicView.applyFind(filter);
+          this.dynamicView.applyFind(auxFilter);
         }
       }
       this.parent.refresh();
@@ -343,17 +359,21 @@
 
     //Twitter Bootstrap
     tableData.table.addClass('table table-hover');
-    if ((opts.options.hover || true))
+    if ((opts.options.hover || true)){
       tableData.table.addClass('table-hover');
+    }
 
-    if ((opts.options.striped || true))
+    if ((opts.options.striped || true)){
       tableData.table.addClass('table-striped');
+    }
 
-    if ((opts.options.bordered || false))
+    if ((opts.options.bordered || false)){
       tableData.table.addClass('table-bordered');
+    }
 
-    if ((opts.options.condensed || false))
+    if ((opts.options.condensed || false)){
       tableData.table.addClass('table-condensed');
+    }
 
     tableData.schema = opts.schema;
     tableData.toolbar = opts.toolbar;
@@ -370,7 +390,7 @@
     tableData.footer = $('<div></div>').addClass(K_CLASS_FOOTER);
     tableData.toolbarContainer = $('<div></div>').addClass(K_CLASS_TOOLBAR);
 
-    tableData.loading = $('<div class="hidden"></div>');;
+    tableData.loading = $('<div class="hidden"></div>');
 
     intFunction.createToolbar(tableData, opts);
     intFunction.createHeader(tableData, opts);
