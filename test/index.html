@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../src/lokijs.datagrid.css">
+  </head>
+  <body>
+    <div class="col-lg-10 col-lg-offset-1">
+      <div id="testGrid"></div>
+    </div>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/lokijs/build/lokijs.min.js"></script>
+    <script type="text/javascript" src="../src/lokijs.datagrid.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        
+        $('#testGrid').lokiGrid({
+          schema: [
+            {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
+            {text: 'Usuario', name: 'userName', type: lokiDataGrid.columnType.string, filter: true},
+            {text: 'Nombre', name: 'name', type: lokiDataGrid.columnType.string},
+            {text: 'Administrador', name: 'isAdmin', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!'},
+            {text: 'Fecha', name: 'date', type: lokiDataGrid.columnType.date}
+          ],
+          toolbar: {
+            refresh: {
+              text: 'Refresh'
+            }
+          },
+          options: {
+            hover: true,
+            striped: false,
+            bordered: true,
+            condensed: true,
+          }
+        });
+        $('#testGrid').data('lokiGrid').load('MOCK_DATA.json');
+
+      });
+    </script>
+  </body>
+</html>

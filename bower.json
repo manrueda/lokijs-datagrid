@@ -1,0 +1,35 @@
+{
+  "name": "lokijs-datagrid",
+  "version": "0.0.2",
+  "authors": [
+    "Manuel Rueda <manuel.rueda.un@gmail.com>"
+  ],
+  "description": "Bootstrap data grid implementation using LokiJS client-side DB",
+  "main": "src/lokijs.datagrid.js",
+  "keywords": [
+    "bootstrap",
+    "grid",
+    "data",
+    "loki",
+    "lokiJS",
+    "JS",
+    "lokijs",
+    "js",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "https://manrueda.github.io/loki-datagrid",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lokijs": "*",
+    "jquery": "2.1.x",
+    "bootstrap": "3.3.x"
+  }
+}
