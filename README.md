@@ -78,6 +78,7 @@ Array with the properties of each column
 * type: Data type of the field
 * isTrue: This string is going to be inserted in the cell if the value is true. Can be HTML (Only form boolean type data)
 * isTrue: This string is going to be inserted in the cell if the value is false. Can be HTML (Only form boolean type data)
+* filter: Defines if the column is filterable or not
 
 #### options
 Object with a mix of properties
