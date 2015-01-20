@@ -1,0 +1,900 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"op",
+				"options"
+			],
+			[
+				"re",
+				"replace"
+			],
+			[
+				"co",
+				"connection"
+			],
+			[
+				"k",
+				"K_PASS"
+			],
+			[
+				"K",
+				"K_USER"
+			],
+			[
+				"pro",
+				"products"
+			],
+			[
+				"result",
+				"resultset"
+			],
+			[
+				"cha",
+				"changePassword"
+			],
+			[
+				"use",
+				"userId"
+			],
+			[
+				"prod",
+				"Productos"
+			],
+			[
+				"param",
+				"parameters"
+			],
+			[
+				"api",
+				"apiToken"
+			],
+			[
+				"user",
+				"userName"
+			],
+			[
+				"sta",
+				"statusCode"
+			],
+			[
+				"exp",
+				"exports"
+			],
+			[
+				"K_",
+				"K_PASS"
+			],
+			[
+				"table",
+				"tableEvents"
+			],
+			[
+				"jq",
+				"jqXHR"
+			],
+			[
+				"id",
+				"ID"
+			],
+			[
+				"U",
+				"Usuarios"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"core",
+				"core-item"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"is",
+				"isAdmin"
+			],
+			[
+				"u",
+				"userName"
+			],
+			[
+				"ad",
+				"isAdmin"
+			],
+			[
+				"task",
+				"task-list"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"da",
+				"dataSource"
+			],
+			[
+				"foo",
+				"footer"
+			],
+			[
+				"attr",
+				"attr"
+			],
+			[
+				"loki",
+				"lokiTable"
+			],
+			[
+				"ti",
+				"this"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"crea",
+				"createUser"
+			],
+			[
+				"se",
+				"success"
+			],
+			[
+				"get",
+				"getToken"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"http",
+				"http_proxy"
+			],
+			[
+				"in",
+				"inputName"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"de",
+				"destWS"
+			],
+			[
+				"src",
+				"srcRS"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"Status",
+				"statusCode"
+			],
+			[
+				"lib",
+				"lib-cov"
+			],
+			[
+				"to",
+				"token"
+			],
+			[
+				"END",
+				"endpoint"
+			],
+			[
+				"au",
+				"authToken"
+			],
+			[
+				"end",
+				"endpoint"
+			],
+			[
+				"ro",
+				"routerHandler"
+			],
+			[
+				"saveM",
+				"saveMongodb"
+			],
+			[
+				"pr",
+				"protocol"
+			],
+			[
+				"ng",
+				"ng-hide"
+			],
+			[
+				"play",
+				"playList"
+			],
+			[
+				"player",
+				"player"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"rou",
+				"routerSite"
+			],
+			[
+				"fo",
+				"found"
+			],
+			[
+				"cli",
+				"clientSave"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"a",
+				"app"
+			],
+			[
+				"r",
+				"router"
+			],
+			[
+				"save",
+				"saveJS"
+			],
+			[
+				"fi",
+				"function"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"res",
+				"restify"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"ac",
+				"actualX"
+			],
+			[
+				"for",
+				"formulas"
+			],
+			[
+				"con",
+				"control"
+			],
+			[
+				"_mr",
+				"_mrCalcClass"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "bower.json",
+			"settings":
+			{
+				"buffer_size": 653,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 731,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"glue",
+				"Glue - Launch"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"sub",
+				"SublimeREPL: Node"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"pacl",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 612.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/manrueda/dev/lokijs-datagrid",
+		"/home/manrueda/dev/lokijs-datagrid/node_modules/grunt"
+	],
+	"file_history":
+	[
+		"/home/manrueda/dev/lokijs-datagrid/src/lokijs-datagrid.js",
+		"/home/manrueda/dev/lokijs-datagrid/src/lokijs-datagrid.css",
+		"/home/manrueda/dev/lokijs-datagrid/test/index.html",
+		"/home/manrueda/dev/lokijs-datagrid/.gitignore",
+		"/home/manrueda/dev/lokijs-datagrid/bower.json",
+		"/home/manrueda/dev/lokijs-datagrid/package.json",
+		"/home/manrueda/dev/lokijs-datagrid/README.md",
+		"/home/manrueda/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/manrueda/dev/lokijs-datagrid/index.html",
+		"/home/manrueda/.ssh/id_rsa.pub",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/bower.json",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/js/lokiJS.table.js",
+		"/home/manrueda/dev/skuld-gestion/bench-rest.js",
+		"/home/manrueda/dev/skuld-gestion/src/modules/db.js",
+		"/home/manrueda/dev/skuld-gestion/package.json",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/products/index.jade",
+		"/home/manrueda/dev/skuld-gestion/bench-rest.prod.js",
+		"/home/manrueda/dev/skuld-gestion/src/config.js",
+		"/home/manrueda/dev/skuld-gestion/src/api.js",
+		"/home/manrueda/dev/skuld-gestion/src/server.js",
+		"/home/manrueda/dev/skuld-gestion/src/site.js",
+		"/home/manrueda/dev/skuld-gestion/src/models/WebError.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/products.js",
+		"/home/manrueda/dev/skuld-gestion/src/api/products.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/css/layout.css",
+		"/home/manrueda/dev/skuld-gestion/src/models/Product.js",
+		"/home/manrueda/dev/skuld-gestion/src/models/User.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/layout.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/users/index.jade",
+		"/home/manrueda/dev/skuld-gestion/src/test/products.js",
+		"/home/manrueda/dev/skuld-gestion/src/test/user.js",
+		"/home/manrueda/dev/skuld-gestion/src/test/parameters.js",
+		"/home/manrueda/dev/skuld-gestion/src/api/users.js",
+		"/home/manrueda/dev/skuld-gestion/src/db-schema.sql",
+		"/home/manrueda/dev/skuld-gestion/src/models/Parameters.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/parameters/index.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/parameters.js",
+		"/home/manrueda/dev/skuld-gestion/src/api/parameters.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/users/create.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/users/delete.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/activity.js",
+		"/home/manrueda/dev/skuld-gestion/src/modules/activityModule.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/activity/index.jade",
+		"/home/manrueda/dev/skuld-gestion/.git/MERGE_MSG",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/index.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/login.js",
+		"/home/manrueda/dev/skuld-gestion/Gruntfile.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/users.js",
+		"/home/manrueda/dev/skuld-gestion/src/api/login.js",
+		"/home/manrueda/dev/skuld-gestion/.gitignore",
+		"/home/manrueda/dev/chrome-devtools-app/Gruntfile.js",
+		"/home/manrueda/dev/skuld-gestion/src/test/login.js",
+		"/home/manrueda/dev/skuld-gestion/src/test/api.js",
+		"/home/manrueda/dev/skuld-gestion/deploy.sh",
+		"/home/manrueda/dev/skuld-gestion/README.md",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/error/400.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/error/500.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/error/404.jade",
+		"/home/manrueda/dev/node-error-handler/package.json",
+		"/home/manrueda/dev/node-error-handler/lib/node-error-handler.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/error.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/login.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/css/login.css",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/users/update.jade",
+		"/home/manrueda/dev/skuld-gestion/src/site/views/users/read.jade",
+		"/home/manrueda/dev/skuld-gestion/src/modules/FormidableMiddleware.js",
+		"/home/manrueda/dev/skuld-gestion/src/config.json",
+		"/home/manrueda/dev/skuld-gestion/trash/tabla de productos:",
+		"/home/manrueda/dev/skuld-gestion/src/Gruntfile.js",
+		"/media/manrueda/240C-4768/developer/apps/usr/palm/applications/com.torrenttv.app.torrenttv/index.html",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/js/layout.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/css/lokiJS.table.css",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/components/bootstrap-material-design/dist/test.html",
+		"/home/manrueda/dev/node-static/server.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/js/ripples.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/js/material.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/css/icons-material-design.css",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/js/material-table.js",
+		"/home/manrueda/dev/skuld-gestion/src/site/public/css/material-table.css",
+		"/home/manrueda/dev/jaala/api/api.js",
+		"/home/manrueda/dev/jaala/api/models/User.js",
+		"/home/manrueda/dev/jaala/api/routes/login.js",
+		"/home/manrueda/dev/jaala/api/config.js",
+		"/home/manrueda/dev/skuld-gestion/build/server.js",
+		"/home/manrueda/dev/skuld-gestion/build/server.js.map",
+		"/home/manrueda/dev/skuld-gestion/build/Gruntfile.js",
+		"/home/manrueda/dev/skuld-gestion/src",
+		"/home/manrueda/dev/google-analytics-element/google-analytics.html",
+		"/home/manrueda/dev/google-analytics-element/bower.json",
+		"/home/manrueda/Desktop/test/index.html",
+		"/home/manrueda/Desktop/test/test.js",
+		"/home/manrueda/dev/google-analytics-element/README.md",
+		"/home/manrueda/checkprocess.sh",
+		"/etc/init.d/README",
+		"/usr/local/share/applications/WebStorm.desktop",
+		"/usr/local/share/applications/spotify.desktop",
+		"/usr/local/share/applications/firefox_dev.desktop",
+		"/home/manrueda/Desktop/WebStorm-139.252/Install-Linux-tar.txt",
+		"/etc/minidlna.conf",
+		"/home/manrueda/dev/doorBell/site/.gitignore",
+		"/home/manrueda/dev/jaala-performance/index.html",
+		"/home/manrueda/dev/asyncMusic/package.json",
+		"/home/manrueda/dev/doorBell/site/public",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/remote/index.html",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/static/js/app.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/remote/js/remote.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/static/js/youtube.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/Gruntfile.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/static/js/db.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/steps/step-3/app/index.html",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/index.html",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/package.json",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/steps/step-3/app/static/js/app.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/steps/step-3/app/static/js/db.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/app/remote/js/search.js",
+		"/home/manrueda/Documents/JSConf Workshops/4 Workshop/jsconf2014-workshop/run.sh",
+		"/home/manrueda/Documents/JSConf Workshops/Second Workshop/polymer-workshop/starter/home-page.html",
+		"/home/manrueda/Documents/JSConf Workshops/Second Workshop/polymer-workshop/starter/task-list.html",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/example/index.js",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/e.wpcom/views/index.jade",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/example/views/index.jade",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/e.wpcom/index.js",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/example/package.json",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/d.session/index.js",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/d.session/views/index.jade",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/c.oauth/index.js",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/example/public/main.css",
+		"/home/manrueda/Documents/JSConf Workshops/Third Workshop/jsconfar-workshop/module-01/c.oauth/views/index.jade"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"/home/manrueda/dev/skuld-gestion/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"cooki",
+			"Decimal",
+			"]\n      ,[",
+			"db",
+			"restify",
+			"sql",
+			" | ",
+			" |",
+			"\"",
+			"pageClick",
+			"tojson",
+			"path",
+			"window",
+			" - ",
+			" ",
+			" - ",
+			"inotify",
+			"media_dir",
+			"port",
+			"Database",
+			"9090",
+			"free",
+			"show",
+			"showE",
+			"showErrors",
+			"USer",
+			"res",
+			",){",
+			"(attr)",
+			"fadeToggle",
+			"&amp;",
+			"'tr",
+			"winebuild"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"', '",
+			"'",
+			"",
+			"\n",
+			"  (attr)",
+			"&"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "bower.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "lokijs-datagrid.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/dev/jaala/api/jaala-api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
