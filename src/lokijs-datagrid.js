@@ -176,6 +176,8 @@
           icon = $('<span></span>').addClass('glyphicon glyphicon-refresh icon');
           if (tool.text){
             text = $('<span></span>').html(tool.text);
+          }else{
+            icon.addClass('iconFix');
           }
           btn = $('<a></a>').addClass('btn btn-primary ' + K_CLASS_BTN_REFRESH);
           btn.append(icon);

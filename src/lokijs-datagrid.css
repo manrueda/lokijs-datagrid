@@ -30,7 +30,7 @@
   margin-right: 0.5rem;
 }
 
-.lokiGrid .lg-toolbar span:only-child.icon {
+.lokiGrid .lg-toolbar span.icon.iconFix {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
