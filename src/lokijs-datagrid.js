@@ -289,22 +289,20 @@
       }
     },
     select: function select(row){
-      var item = row;
-      if (!item){
-        item = this.table.find('tr.' + K_CLASS_SELECTED);
+      if (!row){
+        row = this.table.find('tr.' + K_CLASS_SELECTED);
       }else{
-        item.siblings().removeClass(K_CLASS_SELECTED);
-        item.addClass(K_CLASS_SELECTED);
-        this.wrapper.trigger(new $.Event('rowChange', {row: item}));
+        row.siblings().removeClass(K_CLASS_SELECTED);
+        row.addClass(K_CLASS_SELECTED);
+        this.wrapper.trigger(new $.Event('rowChange', {row: row}));
       }
-      return item;
+      return row;
     },
     dataItem: function dataItem(row){
-      var item = row;
-      if (!item){
+      if (!row){
         return this.dataSource.findByUID(this.select().attr('data-uid'));
       }else{
-        return this.dataSource.findByUID(item.attr('data-uid'));
+        return this.dataSource.findByUID(row.attr('data-uid'));
       }
     },
     getColumn: function getColumn(name){
@@ -346,11 +344,14 @@
       return this.dynamicView.resultset.offset(this.pageSize * (this.current.page - 1)).limit(this.pageSize).data();
     },
     findByUID: function findByUID(uid){
-      var code = uid;
-      if (!code){
+      var result;
+      if (!uid){
         return undefined;
       }
-      return this.dynamicView.resultset.find({dataUid: code}).data()[0];
+      this.dynamicView.applyFind();
+      result =  this.dynamicView.resultset.find({dataUid: uid}).data()[0];
+      this.dynamicView.applyFind();
+      return result;
     },
     select: undefined,
     filter: function filter(filters){
