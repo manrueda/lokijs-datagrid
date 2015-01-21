@@ -290,12 +290,13 @@
     },
     select: function select(row){
       if (!row){
-        return this.table.find('tr.' + K_CLASS_SELECTED);
+        row = this.table.find('tr.' + K_CLASS_SELECTED);
       }else{
         row.siblings().removeClass(K_CLASS_SELECTED);
         row.addClass(K_CLASS_SELECTED);
-        return row;
       }
+      this.wrapper.trigger(new $.Event('rowChange', {row: row}));
+      return row;
     },
     dataItem: function dataItem(row){
       if (!row){

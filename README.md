@@ -105,6 +105,11 @@ Array with the properties of each button for the toolbar
 
 NOTE: The button with the name 'refresh' is a special one, this refresh the data and makes the AJAX call (if the data are remote) and you only can modify the text.
 
+## Events
+
+The events will be fired over the object with the 'lokiGrid' class
+
+* rowChange: When the selected row changes.
 
 ## License
 (The MIT License)
