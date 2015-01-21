@@ -347,7 +347,7 @@
       if (!uid){
         return undefined;
       }
-      return this.dynamicView.resultset.find({dataUid: uid})[0];
+      return this.dynamicView.resultset.find({dataUid: uid}).data()[0];
     },
     select: undefined,
     filter: function filter(filters){
