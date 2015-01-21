@@ -424,8 +424,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/manrueda/dev/lokijs-datagrid",
-		"/home/manrueda/dev/lokijs-datagrid/node_modules/grunt"
+		"/home/manrueda/dev/lokijs-datagrid"
 	],
 	"file_history":
 	[
@@ -736,8 +735,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								254,
+								254
 							]
 						],
 						"settings":
@@ -871,7 +870,7 @@
 		[
 			[
 				"",
-				"~/dev/jaala/api/jaala-api.sublime-project"
+				"~/dev/skuld-gestion/skuld.sublime-project"
 			]
 		],
 		"width": 380.0
