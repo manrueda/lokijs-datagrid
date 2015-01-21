@@ -294,8 +294,8 @@
       }else{
         row.siblings().removeClass(K_CLASS_SELECTED);
         row.addClass(K_CLASS_SELECTED);
+        this.wrapper.trigger(new $.Event('rowChange', {row: row}));
       }
-      this.wrapper.trigger(new $.Event('rowChange', {row: row}));
       return row;
     },
     dataItem: function dataItem(row){

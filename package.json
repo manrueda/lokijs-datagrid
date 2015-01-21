@@ -1,6 +1,6 @@
 {
   "name": "lokijs-datagrid",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Bootstrap data grid implementation using LokiJS client-side DB",
   "repository": {
     "type": "git",
