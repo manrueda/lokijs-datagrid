@@ -289,20 +289,22 @@
       }
     },
     select: function select(row){
-      if (!row){
-        row = this.table.find('tr.' + K_CLASS_SELECTED);
+      var item = row;
+      if (!item){
+        item = this.table.find('tr.' + K_CLASS_SELECTED);
       }else{
-        row.siblings().removeClass(K_CLASS_SELECTED);
-        row.addClass(K_CLASS_SELECTED);
-        this.wrapper.trigger(new $.Event('rowChange', {row: row}));
+        item.siblings().removeClass(K_CLASS_SELECTED);
+        item.addClass(K_CLASS_SELECTED);
+        this.wrapper.trigger(new $.Event('rowChange', {row: item}));
       }
-      return row;
+      return item;
     },
     dataItem: function dataItem(row){
-      if (!row){
+      var item = row;
+      if (!item){
         return this.dataSource.findByUID(this.select().attr('data-uid'));
       }else{
-        return this.dataSource.findByUID(row.attr('data-uid'));
+        return this.dataSource.findByUID(item.attr('data-uid'));
       }
     },
     getColumn: function getColumn(name){
@@ -344,10 +346,11 @@
       return this.dynamicView.resultset.offset(this.pageSize * (this.current.page - 1)).limit(this.pageSize).data();
     },
     findByUID: function findByUID(uid){
-      if (!uid){
+      var code = uid;
+      if (!code){
         return undefined;
       }
-      return this.dynamicView.resultset.find({dataUid: uid}).data()[0];
+      return this.dynamicView.resultset.find({dataUid: code}).data()[0];
     },
     select: undefined,
     filter: function filter(filters){
