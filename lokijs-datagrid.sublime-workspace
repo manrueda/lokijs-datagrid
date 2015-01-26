@@ -319,7 +319,7 @@
 			"file": "src/lokijs-datagrid.js",
 			"settings":
 			{
-				"buffer_size": 15250,
+				"buffer_size": 15364,
 				"line_ending": "Unix"
 			}
 		},
@@ -591,6 +591,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"uid",
 			"select: ",
 			".selec",
 			"cooki",
@@ -649,7 +650,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -658,15 +659,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15250,
+						"buffer_size": 15364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11644,
-								11644
+								10276,
+								10276
 							]
 						],
 						"settings":
@@ -735,10 +736,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6213.0,
+						"translation.y": 5274.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -754,8 +755,8 @@
 						"selection":
 						[
 							[
-								48,
-								48
+								50,
+								50
 							]
 						],
 						"settings":
@@ -843,8 +844,8 @@
 						"selection":
 						[
 							[
-								48,
-								48
+								331,
+								331
 							]
 						],
 						"settings":
@@ -916,7 +917,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{

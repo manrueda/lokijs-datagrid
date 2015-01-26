@@ -93,6 +93,7 @@ Object with a mix of properties
 * condensed: Set the bootstrap table condensed class
 * loadingIcon: Set the class for the span that is used when the AJAX is loading
 * pageSize: Number of rows per page (default: 10)
+* caseInsensitive: Defines if the search is made case insensitive or sensitive.
 
 #### toolbar
 Array with the properties of each button for the toolbar

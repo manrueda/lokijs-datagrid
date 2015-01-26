@@ -135,10 +135,10 @@
 
 
       var begin = (cur.page < 6 ? 1 : cur.page - 5);
-      var stop = Math.ceil(cur.length / tableData.dataSource.pageSize);
+      var stop = Math.ceil(cur.length / tableData.dataSource.options.pageSize);
       stop = (stop < 11 ? stop : 11) + begin;
       
-      for(var i = begin; i <= stop && i <= Math.ceil(cur.length / tableData.dataSource.pageSize); i++){
+      for(var i = begin; i <= stop && i <= Math.ceil(cur.length / tableData.dataSource.options.pageSize); i++){
         if (i === cur.page){
           //Twitter Bootstrap;
           foot.push(['<li class="active"><a ', K_ATTR_DATAPAGE, '="', i, '">', i, '</a></li>'].join(''));  
@@ -147,7 +147,7 @@
         }
       }
 
-      foot.push('<li class="' + (cur.page === Math.ceil(cur.length / tableData.dataSource.pageSize) ? 'disabled':'') + '" ><a data-page="+1"><span aria-hidden="true">&raquo;</span><span class="sr-only">Previous</span></a></li>');
+      foot.push('<li class="' + (cur.page === Math.ceil(cur.length / tableData.dataSource.options.pageSize) ? 'disabled':'') + '" ><a data-page="+1"><span aria-hidden="true">&raquo;</span><span class="sr-only">Previous</span></a></li>');
 
       foot.push('</ul></nav>');
 
@@ -341,7 +341,7 @@
     },
     getView: function getView(){
       this.current.length = this.dynamicView.resultset.data().length;
-      return this.dynamicView.resultset.offset(this.pageSize * (this.current.page - 1)).limit(this.pageSize).data();
+      return this.dynamicView.resultset.offset(this.options.pageSize * (this.current.page - 1)).limit(this.options.pageSize).data();
     },
     findByUID: function findByUID(uid){
       var result;
@@ -365,7 +365,7 @@
           var value = filters[filed];
           var schema = this.parent.getColumn(filed);
           if (schema.type === K_COLUMNS_TYPE.string || schema.type === K_COLUMNS_TYPE.date){
-            auxFilter[filed] = {$contains: value};
+            auxFilter[filed] = this.options.caseInsensitive ? {$regex: new RegExp(value, 'i')} : {$contains: value};
           }else{
             auxFilter[filed] = {$eq: value};
           }
@@ -375,7 +375,10 @@
       }
       this.parent.refresh();
     },
-    pageSize: 10
+    options: {
+      pageSize: 10,
+      caseInsensitive: true
+    }
   };
 
   $.fn.lokiGrid = function lokiGrid(opts){
@@ -425,7 +428,8 @@
     tableData.dataSource.wrapper = wrapper;
     tableData.dataSource.parent = tableData;
 
-    tableData.dataSource.pageSize = opts.options.pageSize || tableData.dataSource.pageSize;
+    tableData.dataSource.options.pageSize = opts.options.pageSize || tableData.dataSource.options.pageSize;
+    tableData.dataSource.options.caseInsensitive = opts.options.caseInsensitive !== undefined ? opts.options.caseInsensitive : tableData.dataSource.options.caseInsensitive;
 
     tableData.headers = $('<thead></thead>');
     tableData.headers.append('<tr></tr>');
