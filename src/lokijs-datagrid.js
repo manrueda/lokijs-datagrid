@@ -257,15 +257,17 @@
               toInsert = item[col.name].toString();
               break;
             case K_COLUMNS_TYPE.boolean:
-              if (col.isTrue && col.isTrue){
-                if (item[col.name]){
-                  toInsert = col.isTrue.replace('#value', item[col.name]);
-                }else{
-                  toInsert = col.isFalse.replace('#value', item[col.name]);
-                }
-              }else{
+
+              if (item[col.name] === true && col.isTrue){
+                toInsert = col.isTrue.replace('#value', item[col.name]);
+              }else if (item[col.name] === false && col.isFalse){
+                toInsert = col.isFalse.replace('#value', item[col.name]);
+              }else if (item[col.name] === undefined || item[col.name] === null){
+                toInsert = col.isNullOrUndefined ? col.isNullOrUndefined.replace('#value', item[col.name]) : '';
+              } else{
                 toInsert = item[col.name].toString();
               }
+
               break;
             case K_COLUMNS_TYPE.date:
               toInsert = item[col.name].toString();

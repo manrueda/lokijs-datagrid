@@ -31,7 +31,7 @@ This is a fusion between the LokiJS ([techfort/LokiJS](https://github.com/techfo
             {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
             {text: 'User', name: 'userName', type: lokiDataGrid.columnType.string, filter: true},
             {text: 'Name', name: 'name', type: lokiDataGrid.columnType.string},
-            {text: 'Administrator', name: 'isAdmin', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!'},
+            {text: 'Administrator', name: 'isAdmin', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!', isNullOrUndefined: 'NO DATA'},
             {text: 'Date', name: 'date', type: lokiDataGrid.columnType.date}
         ],
         options: {
@@ -82,6 +82,7 @@ Array with the properties of each column
 * type: Data type of the field
 * isTrue: This string is going to be inserted in the cell if the value is true. Can be HTML (Only form boolean type data)
 * isTrue: This string is going to be inserted in the cell if the value is false. Can be HTML (Only form boolean type data)
+* isNullOrUndefined: This string is going to be inserted in the cell if the value is null or undefined. Can be HTML (Only form boolean type data)
 * filter: Defines if the column is filterable or not
 
 #### options
