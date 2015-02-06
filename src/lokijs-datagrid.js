@@ -63,12 +63,40 @@
 
         var input = $('<input></input>');
         var data = $(this).parents('.' + K_CONST_MASTERCLASS).data(K_CONST_DATA_NAME);
+        if (data.schema.filter(function(a){return a.name === filed;})[0].type === K_COLUMNS_TYPE.boolean){
+          input.attr('type', 'checkbox');
+          input.triCheck();
+        }
         $(this).parents('th').width($(this).parents('th').width());
         $(this).parents('th').append(input);
-        if (data.dataSource.currentFilter[filed]){
+        if (data.dataSource.currentFilter[filed] !== undefined){
           input.val(data.dataSource.currentFilter[filed]);
+          if (data.schema.filter(function(a){return a.name === filed;})[0].type === K_COLUMNS_TYPE.boolean){
+            switch(data.dataSource.currentFilter[filed]) {
+              case '':
+                input.data('checked',1);
+                input.prop('indeterminate',false);
+                break;
+              // indeterminate, going checked
+              case false:
+                input.data('checked',2);
+                input.prop('indeterminate',true);
+                input.prop('checked',false);                
+                break;
+              // checked, going unchecked
+              default:  
+                input.data('checked',0);
+                input.prop('indeterminate',false);
+                input.prop('checked',true);
+              // unchecked, going indeterminate
+            }
+          }
         }
-        input.off('keyup', eventHandler.header.filterKeyup).on('keyup', eventHandler.header.filterKeyup);
+        if (data.schema.filter(function(a){return a.name === filed;})[0].type === K_COLUMNS_TYPE.boolean){
+          input.off('change', eventHandler.header.filterKeyup).on('change', eventHandler.header.filterKeyup);
+        }else{
+          input.off('keyup', eventHandler.header.filterKeyup).on('keyup', eventHandler.header.filterKeyup);
+        }
         input.focus();
         $(this).addClass('opened');
       },
@@ -77,12 +105,31 @@
         var icon = $(this).siblings('div').find('span.' + K_CLASS_FILTER);
         var filed = icon.attr('data-filter');
         var value = $(this).val();
+
+        
+        if (data.schema.filter(function(a){return a.name === filed;})[0].type === K_COLUMNS_TYPE.boolean){
+          switch($(this).data('checked')) {
+            // unchecked, going indeterminate
+            case 0:
+              value = '';
+            break;
+            // indeterminate, going checked
+            case 1:
+              value = false;
+              break;
+            // checked, going unchecked
+            default:  
+              value = true;
+          }
+        }
+
+        
         if (value === ''){
           icon.removeClass('filtered');
           delete data.dataSource.currentFilter[filed];
         }else{
           icon.addClass('filtered');
-          data.dataSource.currentFilter[filed] = $(this).val();
+          data.dataSource.currentFilter[filed] = value;
         }
         data.dataSource.filter(data.dataSource.currentFilter);
       }
@@ -462,6 +509,34 @@
   };
 
 
+  $.fn.triCheck = function(){
+    $(this).each(function(){
+      $(this).addClass('triState');
+      $(this).data('checked',0);
+      $(this).change(function(){
+        var el = $(this);
+
+        switch(el.data('checked')) {
+          // unchecked, going indeterminate
+          case 0:
+            el.data('checked',1);
+            el.prop('indeterminate',true);
+            break;
+          // indeterminate, going checked
+          case 1:
+            el.data('checked',2);
+            el.prop('indeterminate',false);
+            el.prop('checked',true);                
+            break;
+          // checked, going unchecked
+          default:  
+            el.data('checked',0);
+            el.prop('indeterminate',false);
+            el.prop('checked',false);
+        }
+      });
+    });
+  };
 
   window.lokiDataGrid = {
     columnType: K_COLUMNS_TYPE
