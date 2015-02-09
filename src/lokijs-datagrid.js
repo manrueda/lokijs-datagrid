@@ -301,7 +301,7 @@
               toInsert = item[col.name];
               break;
             case K_COLUMNS_TYPE.number:
-              toInsert = item[col.name].toString();
+              toInsert = (item[col.name] ? item[col.name] : '').toString();
               break;
             case K_COLUMNS_TYPE.boolean:
 
