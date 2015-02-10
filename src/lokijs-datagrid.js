@@ -299,9 +299,15 @@
           switch(col.type){
             case K_COLUMNS_TYPE.string:
               toInsert = item[col.name];
+              if (col.template){
+                toInsert = col.template(item[col.name], col);
+              }
               break;
             case K_COLUMNS_TYPE.number:
               toInsert = (item[col.name] ? item[col.name] : '').toString();
+              if (col.template){
+                toInsert = col.template(toInsert, col);
+              }
               break;
             case K_COLUMNS_TYPE.boolean:
 
@@ -313,11 +319,16 @@
                 toInsert = col.isNullOrUndefined ? col.isNullOrUndefined.replace('#value', item[col.name]) : '';
               } else{
                 toInsert = item[col.name].toString();
+                if (col.template){
+                  toInsert = col.template(item[col.name], col);
+                }
               }
-
               break;
             case K_COLUMNS_TYPE.date:
               toInsert = item[col.name].toString();
+              if (col.template){
+                toInsert = col.template(item[col.name], col);
+              }
               break;
           }
 

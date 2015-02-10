@@ -17,7 +17,7 @@
           schema: [
             {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
             {text: 'Usuario', name: 'userName', type: lokiDataGrid.columnType.string, filter: true},
-            {text: 'Nombre', name: 'name', type: lokiDataGrid.columnType.string},
+            {text: 'Nombre', name: 'name', type: lokiDataGrid.columnType.string, template: function(value){return value + Date.now()}},
             {text: 'Administrador', name: 'isAdmin', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!'},
             {text: 'Fecha', name: 'date', type: lokiDataGrid.columnType.date},
             {text: 'Other Bool', name: 'otherBool', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!'}

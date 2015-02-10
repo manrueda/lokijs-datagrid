@@ -84,6 +84,7 @@ Array with the properties of each column
 * isTrue: This string is going to be inserted in the cell if the value is false. Can be HTML (Only form boolean type data)
 * isNullOrUndefined: This string is going to be inserted in the cell if the value is null or undefined. Can be HTML (Only form boolean type data)
 * filter: Defines if the column is filterable or not
+* template: Function that will be called on every cell render. Only need to return the string to be inserted in the cell. The function have 2 parameters, the first is the value of the cell and the second is the column schema.
 
 #### options
 Object with a mix of properties
