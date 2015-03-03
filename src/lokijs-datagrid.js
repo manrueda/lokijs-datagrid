@@ -150,6 +150,9 @@
     createHeader: function createHeader(tableData, opts){
       $.each(opts.schema, function each(index, col){
         var th = $(['<th><div>', col.text,'</div></th>'].join(''));
+        if (col.visible === false){
+          th.hide();
+        }
         var div = th.find('div');
         if (col.attr){
           $.each(col.attr, function each(index, attr){
@@ -332,7 +335,7 @@
               break;
           }
 
-          arr.push(['<td class="', col.name ,'">', toInsert, '</td>'].join(''));
+          arr.push(['<td class="', col.name ,' ', col.visible === false ? 'hidden' : '' ,'">', toInsert, '</td>'].join(''));
         });
         arr.push('</tr>');
         that.body.append(arr.join(''));

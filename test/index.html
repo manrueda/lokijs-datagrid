@@ -15,7 +15,7 @@
         
         $('#testGrid').lokiGrid({
           schema: [
-            {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false},
+            {text: 'ID', name: 'id', type: lokiDataGrid.columnType.number, filter: false, visible: false},
             {text: 'Usuario', name: 'userName', type: lokiDataGrid.columnType.string, filter: true},
             {text: 'Nombre', name: 'name', type: lokiDataGrid.columnType.string, template: function(value){return value + Date.now()}},
             {text: 'Administrador', name: 'isAdmin', type: lokiDataGrid.columnType.boolean, isTrue: 'YESSS!!', isFalse: 'NUUUU!!'},
